@@ -1,0 +1,10 @@
+
+*.user
+*.suo
+*.DotSettings
+bin
+obj
+packages
+publish
+elmah
+.vscode/
