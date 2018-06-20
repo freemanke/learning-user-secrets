@@ -11,17 +11,24 @@ dotnet add package Microsoft.Extensions.Configuration.UserSecrets
 
 2. Add UserSecretsId node to learning-user-secrets.csproj
 ```
-<UserSecretsId>4270b588-c2ce-4c08-91bb-58aa1901134c</UserSecretsId>
+<PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>learning_user_secrets</RootNamespace>
+    <UserSecretsId>4270b588-c2ce-4c08-91bb-58aa1901134c</UserSecretsId>
+</PropertyGroup>
 ```
 
 3. Add new user secret
 ```
 dotnet user-secrets set ConnectionString "server=localhost;dabase=test;"
+Successfully saved ConnectionString = server=localhost;dabase=test; to the secret store.
 ```
 
 4. Check user secrets
 ```
 dotnet user-secrets list
+ConnectionString = server=localhost;dabase=test;
 ```
 
 5. Get Secrets in program.cs
@@ -35,10 +42,6 @@ Console.WriteLine(configuration["ConnectionString"]);
 6. run
 ```
 dotnet run
-```
-
-7. output
-```
 Hello World!
 server=localhost;dabase=test;
 ```
