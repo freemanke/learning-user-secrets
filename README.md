@@ -16,7 +16,7 @@ dotnet add package Microsoft.Extensions.Configuration.UserSecrets
 
 3. Add new user secret
 ```
-dotnet user-secrets ConnectionString server=localhost;dabase=test;
+dotnet user-secrets set ConnectionString "server=localhost;dabase=test;"
 ```
 
 4. Check user secrets
@@ -40,5 +40,5 @@ dotnet run
 7. output
 ```
 Hello World!
-server=localhost
+server=localhost;dabase=test;
 ```
